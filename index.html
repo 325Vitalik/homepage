@@ -7,11 +7,28 @@
     <title>Résumé</title>
     <style>
       .avatar{
-        max-width: 13rem;
-        margin-top: 20%;
+        max-width: 10rem;
+        margin-top: 15%;
+        padding: 5%;
         border-radius: 40px;
       }
+
+      @media (max-width: 768px) {
+        .avatar{
+          max-width: 15rem;
+          margin-top: 5%;
+          padding: 0px;
+        }
+      }
     </style>
+    <script>
+      function avatarHover(elem){
+        elem.src = "assets/img/Funny Donnald.jpg";
+      }
+      function avatarUnhover(elem){
+        elem.src = "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg";
+      }
+    </script>
   </head>
   <body>
     <main>
@@ -21,7 +38,7 @@
             <div class="row">
               <div class="three wide center aligned column">
                 <div class="avatar-wrapper">
-                <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg" aria-label="Donald Trimp Picture">
+                <img class="avatar" src="https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg" aria-label="Donald Trimp Picture" onmouseover='avatarHover(this)' onmouseout="avatarUnhover(this)">
                 </div>
               </div>
               <div class="thirteen wide column">
